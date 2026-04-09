@@ -61,9 +61,25 @@ from builtins import input, int, print, range
 
 # write a program which will take input from user and check the count of digits in the number and print them
 
+# n = int(input("Enter a number:  "))
+# count = 0 
+# while n > 0:
+#     n = n//10
+#     count += 1
+# print("The count of digits in the number is: ", count)
+
+
+# H.W
+# sum of the digits in anumber
 n = int(input("Enter a number:  "))
-count = 0 
-while n > 0:
-    n = n//10
-    count += 1
-print("The count of digits in the number is: ", count)
+total = 0
+while n > 0:    
+    digit = n % 10
+    total += digit
+    n = n // 10 
+
+print("The sum of digits in the number is: ", total)
+
+# reverse the number
+
+# narsistic number
