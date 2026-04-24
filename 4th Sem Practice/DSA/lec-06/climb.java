@@ -19,21 +19,21 @@
 
 
 
-public class climb {
-    static void path(int n) {
-        //base case
-        if(n==0){
-           System.out.println(str);
-           return ;
-        }
-        if(n>= 1) path(str+"1", n-1);
-        if(n >=2) path(str+"2",n-2);
+// public class climb {
+//     static void path(int n) {
+//         //base case
+//         if(n==0){
+//            System.out.println(str);
+//            return ;
+//         }
+//         if(n>= 1) path(str+"1", n-1);
+//         if(n >=2) path(str+"2",n-2);
         
-    }
+//     }
 
-    public static void main(String[] args) {
-        int n = 5;
-        path(" ");
+//     public static void main(String[] args) {
+//         int n = 5;
+//         path(" ");
        
-    }
-}
+//     }
+// }
