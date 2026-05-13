@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- asynchronous programinggg -->
+
+    <script>
+        // setTimeout(()=>{
+        //     console.log("B");
+            
+        // },0) 
+        // setTimeout(()=>{
+        //     console.log("C");
+            
+        // },1000)
+        // setTimeout(()=>{
+        //     console.log("D");
+            
+        // },2000)
+
+        // console.log("A");
+        
+
+               
+
+
+        function step1(fn){
+            setTimeout(()=>{
+                console.log("selecteddd");
+                fn()
+            },3000)
+        }
+        function step2(fn){
+            setTimeout(()=>{
+                console.log("captionn added");
+                fn()
+            },2500)
+        }
+        function step3(fn){
+            setTimeout(()=>{
+                console.log("uploadee");
+                fn()
+            },2000)
+        }
+        function step4(){
+            setTimeout(()=>{
+                console.log("posttt");
+                
+            },122)
+        }
+        step1(function(){
+            step2(function(){
+                step3(function(){
+                    step4()
+                })
+            })
+        })
+
+
+
+        
+
+
+    </script>
+    
+</body>
+</html>
