@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // A -> B
+
+
+        // let promise = new Promise((res,reject)=>{
+        //     res()
+        // })
+        // // console.log(promise);
+    
+
+
+
+
+        function step1(){
+            return new Promise((res, reject) => {
+                setTimeout(() => {
+                    console.log("Selected");
+                    res();
+                    
+                },5000);
+            });
+        }
+
+        function step2(){
+            return new Promise(() => {
+                setTimeout(() => {
+                console.log("captionnn");
+                res()
+                },4000)
+            })
+        }
+
+        async function call(params) {
+            await step1();
+            console.log("hii");
+
+            await step2();
+            
+        }
+        call();
+
+
+
+
+
+    </script>
+</body>
+</html>
