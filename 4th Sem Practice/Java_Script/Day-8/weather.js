@@ -1,3 +1,5 @@
+// weather App
+
 let inp= document.querySelector('input')
 let btn= document.querySelector('button')
 let h1= document.querySelector("h1")
