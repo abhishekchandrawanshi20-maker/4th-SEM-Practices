@@ -38,10 +38,8 @@
 //  }else{
 //     alert("kuch nhi ho sakta aapse...")
 //  }
- 
-   
 
-//  })
+//})
    
  
 
@@ -70,8 +68,6 @@
 
     }
     localStorage.setItem("userData",JSON.stringify(data))
-
-    
 
     // console.log("hello");
     
@@ -109,5 +105,3 @@
    
 
  })
-   
- 
