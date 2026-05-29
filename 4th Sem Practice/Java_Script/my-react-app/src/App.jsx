@@ -1,3 +1,7 @@
+import { useEffect } from "react"
+import { useState } from "react"
+
+
 // import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from './assets/vite.svg'
@@ -175,18 +179,62 @@
 
 
 
-import React, { useState, useEffect } from 'react';
+// import React, { useState, useEffect } from 'react';
+
+// const App = () => {
+
+//     let [ApiData,SetApiData] = useState([]);
+    
+//     useEffect(() => {
+//            // console.log("hello");
+//            async function call(){
+//             let res = await fetch("https://jsonplaceholder.typicode.com/todos")
+//             let data = await res.json()
+//             // console.log(data);
+//             SetApiData(data)
+            
+//            }
+//            call()
+
+//     }, []);
+
+//     return (
+//         <div>
+//             {
+//                 ApiData.map((a)=>{
+//                     return(
+//                         <div>
+//                             <h1>{a.id}</h1>
+//                         </div>
+//                     )
+//                 })
+//             }
+//         </div>
+//     );
+// }
+
+// export default App;
+
+
+
+
+
+
+
+
+import './App.css'
 
 const App = () => {
 
-    let [ApiData, SetApiData] = useState(0);
-    // let [city, SetCity]=useState("Goa")
+    let [ApiData,SetApiData] = useState([]);
+    
     useEffect(() => {
            // console.log("hello");
            async function call(){
-            let res = await fetch("https://jsonplaceholder.typicode.com/todos")
+            let res = await fetch("https://dummyjson.com/products")
             let data = await res.json()
-            console.log(data);
+            console.log(data.products);
+            SetApiData(data.products)
             
            }
            call()
@@ -194,12 +242,13 @@ const App = () => {
     }, []);
 
     return (
-        <div>
+        <div id ="parent_div"  className="">
             {
                 ApiData.map((a)=>{
                     return(
-                        <div>
+                        <div id="card">
                             <h1>{a.id}</h1>
+                            <img src={a.thumbnail}/>
                         </div>
                     )
                 })
