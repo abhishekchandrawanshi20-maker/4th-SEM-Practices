@@ -1,6 +1,6 @@
-import { useEffect } from "react"
-import { useState } from "react"
 
+import { useEffect } from "react"
+import { useState } from "react" 
 
 // import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
@@ -213,6 +213,50 @@ import { useState } from "react"
 //     );
 // }
 
+// // export default App;
+
+
+
+
+
+
+
+
+// import './App.css'
+
+// const App = () => {
+
+//     let [ApiData,SetApiData] = useState([]);
+    
+//     useEffect(() => {
+//            // console.log("hello");
+//            async function call(){
+//             let res = await fetch("https://dummyjson.com/products")
+//             let data = await res.json()
+//             console.log(data.products);
+//             SetApiData(data.products)
+            
+//            }
+//            call()
+
+//     }, []);
+
+//     return (
+//         <div id ="parent_div"  className="">
+//             {
+//                 ApiData.map((a)=>{
+//                     return(
+//                         <div id="card">
+//                             <h1>{a.id}</h1>
+//                             <img src={a.thumbnail}/>
+//                         </div>
+//                     )
+//                 })
+//             }
+//         </div>
+//     );
+// }
+
 // export default App;
 
 
@@ -222,39 +266,22 @@ import { useState } from "react"
 
 
 
-import './App.css'
+
+
+
+
+
+// Dt:-03/06/2026
+// Todo List
+import React from 'react'
+import Todo from "./Todo"
 
 const App = () => {
-
-    let [ApiData,SetApiData] = useState([]);
-    
-    useEffect(() => {
-           // console.log("hello");
-           async function call(){
-            let res = await fetch("https://dummyjson.com/products")
-            let data = await res.json()
-            console.log(data.products);
-            SetApiData(data.products)
-            
-           }
-           call()
-
-    }, []);
-
-    return (
-        <div id ="parent_div"  className="">
-            {
-                ApiData.map((a)=>{
-                    return(
-                        <div id="card">
-                            <h1>{a.id}</h1>
-                            <img src={a.thumbnail}/>
-                        </div>
-                    )
-                })
-            }
-        </div>
-    );
+  return (
+    <div>
+      <Todo/>
+    </div>
+  )
 }
 
-export default App;
+export default App
