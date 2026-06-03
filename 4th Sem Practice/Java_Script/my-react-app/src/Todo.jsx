@@ -7,7 +7,9 @@ const Todo = () => {
 
 
 
-
+const d= (id) => {
+    setTodos((current) => current.filter((todo) => todo.id!==id))
+}
 
 
 
@@ -36,11 +38,11 @@ const Todo = () => {
             <span>{todo}</span>
 
             <div className="actions">
-              <button >
+              {/* <button >
                 Edit
-              </button>
+              </button> */}
 
-              <button >
+              <button onClick={()=>d (index)}>
                 Delete
               </button>
             </div>
