@@ -271,15 +271,56 @@ import { useState } from "react"
 
 
 
-// Dt:-03/06/2026
-// Todo List
+// // Dt:-03/06/2026
+// // Todo List
+// import React from 'react'
+// import Todo from "./Todo"
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Todo/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+
+
+
+
+
+// Dt:-08/06/26
+// useContext 
+
+
 import React from 'react'
-import Todo from "./Todo"
+import Home from "./Home"
+
+//main-> app-> A-> b-> C
+
+
+
+import NavBar from "./NavBar"
+
+import { Route, Routes } from "react-router-dom"
+import Cart from "./Cart"
 
 const App = () => {
+  let [apiData,SetApiData] =   useState([])
+ let [cart,SetCart]= useState([])
   return (
+
     <div>
-      <Todo/>
+      <NavBar/>
+      <Routes>
+        <Route path="/" element={<Home apiData={apiData}  SetApiData={SetApiData} cart={cart}  SetCart={SetCart}/>}/>
+        <Route path="/cart" element={<Cart cart={cart}/>}/>
+
+      </Routes>
     </div>
   )
 }
