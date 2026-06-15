@@ -333,13 +333,44 @@ import { useState } from "react"
 
 
 
+// import React from 'react'
+// import Todo from './Todo'
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Todo/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+
+
+
+
+
+
+
+
+
 import React from 'react'
-import Todo from './Todo'
+import UserList from "./UserList"
+import { Route, Routes } from "react-router-dom"
+import UserProfile from "./UserProfile"
 
 const App = () => {
   return (
     <div>
-      <Todo/>
+     {/* http://localhost:5173/profile/0 */}
+      <Routes>
+        <Route   path="/"   element={ <UserList/>}/>
+        <Route   path="/profile/:id"   element={ <UserProfile/>}/>
+
+      </Routes>
     </div>
   )
 }
