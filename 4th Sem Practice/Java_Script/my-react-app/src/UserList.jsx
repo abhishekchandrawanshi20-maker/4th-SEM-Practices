@@ -15,7 +15,7 @@ const UserList = () => {
   return (
     <div>{list.map((data,id)=>{
         return(<>
-        <h2 className='text-xl font-bold' key={id}>{data}</h2>
+        <h2 className=' bg-green-400' key={id}>{data}</h2>
       
         <button  onClick={()=>fun1(id)}>show</button>
      
