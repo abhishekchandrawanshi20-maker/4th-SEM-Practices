@@ -387,34 +387,51 @@ import { useState } from "react"
 
 
 
-const App = () =>{
-  Array.prototype.myMap=function(cb){
-    // let res=[]
-    for(let i=0; i<this.length; i++) {
-      // res.push(cb(this[i], i, this))
-      cb(this[i], i, this)
-      // if (cb(this[i], i, this)){
-      //   res.push(this[i])
-      // }
-    }
-    // return res
+// const App = () =>{
+//   Array.prototype.myMap=function(cb){
+//     // let res=[]
+//     for(let i=0; i<this.length; i++) {
+//       // res.push(cb(this[i], i, this))
+//       cb(this[i], i, this)
+//       // if (cb(this[i], i, this)){
+//       //   res.push(this[i])
+//       // }
+//     }
+//     // return res
 
-  }
+//   }
    
-  let arr=[1,2,3,43,5]
+//   let arr=[1,2,3,43,5]
 
-  let data = arr.map((a,b,c)=>{
+//   let data = arr.map((a,b,c)=>{
 
-    // return a>2
-    console.log(a);
+//     // return a>2
+//     console.log(a);
 
-  }  )
-  console.log(data);
+//   }  )
+//   console.log(data);
   
+// }
+
+
+
+const App = ()=>{
+
+  Array.prototype.myR=function(cb, initialData=0){
+    let sum = initialData
+    for(let i=0; i<this.length; i++) {
+      sum=cb(sum,this[i])
+    }
+    return sum
+  }
+  let arr=[1,2,3,4,5]
+  let data = arr.myR((a,b,c,d)=>{
+    return a+b
+
+  })
+  console.log(data);
+
+
 }
-
-
-
-
 
 
