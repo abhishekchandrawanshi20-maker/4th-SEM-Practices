@@ -1,4 +1,4 @@
-/* Todo */
+/* Todo
 
 #parent_div{
   display: flex;
@@ -17,16 +17,16 @@ img{
   height: 100%;
   width: 100%;
 }
-
+ */
 
 /* ---------x-----------x----------x----------- */
 
 
 
-
-
-
 /* 
+
+
+
 *{
   margin: 0;
   padding: 0;
@@ -47,9 +47,9 @@ li{
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  /* height: 200px;
+  height: 200px;
   width: 171px;
-  background-color: antiquewhite; */
+  background-color: antiquewhite;
 }
 #main_card{
   height: 200px;
