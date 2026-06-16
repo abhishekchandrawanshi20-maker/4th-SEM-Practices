@@ -357,22 +357,64 @@ import { useState } from "react"
 
 
 
-import React from 'react'
-import UserList from "./UserList"
-import { Route, Routes } from "react-router-dom"
-import UserProfile from "./UserProfile"
+// import React from 'react'
+// import UserList from "./UserList"
+// import { Route, Routes } from "react-router-dom"
+// import UserProfile from "./UserProfile"
 
-const App = () => {
-  return (
-    <div>
-     {/* http://localhost:5173/profile/0 */}
-      <Routes>
-        <Route   path="/"   element={ <UserList/>}/>
-        <Route   path="/profile/:id"   element={ <UserProfile/>}/>
+// const App = () => {
+//   return (
+//     <div>
+//      {/* http://localhost:5173/profile/0 */}
+//       <Routes>
+//         <Route   path="/"   element={ <UserList/>}/>
+//         <Route   path="/profile/:id"   element={ <UserProfile/>}/>
 
-      </Routes>
-    </div>
-  )
+//       </Routes>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+
+
+
+
+
+
+
+
+const App = () =>{
+  Array.prototype.myMap=function(cb){
+    // let res=[]
+    for(let i=0; i<this.length; i++) {
+      // res.push(cb(this[i], i, this))
+      cb(this[i], i, this)
+      // if (cb(this[i], i, this)){
+      //   res.push(this[i])
+      // }
+    }
+    // return res
+
+  }
+   
+  let arr=[1,2,3,43,5]
+
+  let data = arr.map((a,b,c)=>{
+
+    // return a>2
+    console.log(a);
+
+  }  )
+  console.log(data);
+  
 }
 
-export default App
+
+
+
+
+
