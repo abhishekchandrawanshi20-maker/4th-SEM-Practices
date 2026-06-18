@@ -415,23 +415,31 @@ import { useState } from "react"
 
 
 
-const App = ()=>{
+// const App = ()=>{
 
-  Array.prototype.myR=function(cb, initialData=0){
-    let sum = initialData
-    for(let i=0; i<this.length; i++) {
-      sum=cb(sum,this[i])
-    }
-    return sum
-  }
-  let arr=[1,2,3,4,5]
-  let data = arr.myR((a,b,c,d)=>{
-    return a+b
+//   Array.prototype.myR=function(cb, initialData=0){
+//     let sum = initialData
+//     for(let i=0; i<this.length; i++) {
+//       sum=cb(sum,this[i])
+//     }
+//     return sum
+//   }
+//   let arr=[1,2,3,4,5]
+//   let data = arr.myR((a,b,c,d)=>{
+//     return a+b
 
-  })
-  console.log(data);
+//   })
+//   console.log(data);
 
 
-}
+// }
+
+
+
+
+
+
+
+
 
 
